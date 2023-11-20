@@ -14,7 +14,6 @@ public class Main {
         double b;
         double result;
         String sing;
-        String exit;
         while (true) {
             System.out.println("-----CALCULATOR-----");
             System.out.print("Введите первое значение: ");
@@ -32,20 +31,20 @@ public class Main {
                 switch (sing) {
                     case "+"->{
                         result = calculator.sum(a, b);
-                        System.out.printf("a + b = %.2f\n", result);
+                        System.out.printf("%.2f + %.2f = %.2f\n",a, b, result);
                     }
                     case "-"->{
                         result = calculator.difference(a, b);
-                        System.out.printf("a - b = %.2f\n", result);
+                        System.out.printf("%.2f - %.2f = %.2f\n", a, b, result);
                     }
                     case "*"->{
                         result = calculator.multiply(a, b);
-                        System.out.printf("a * b = %.2f\n", result);
+                        System.out.printf("%.2f * %.2f = %.2f\n", a, b, result);
                     }
                     case "/"->{
                         if (b != 0) {
-                            result = calculator.sum(a, b);
-                            System.out.printf("a / b = %.2f\n", result);
+                            result = calculator.division(a, b);
+                            System.out.printf("%.2f / %.2f = %.2f\n", a, b, result);
                         } else {
                             System.out.println("На ноль делить нельзя");
                         }
